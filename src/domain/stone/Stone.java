@@ -1,6 +1,7 @@
 package domain.stone;
 
 public abstract class Stone {
+    private Integer personalNumber;
     private String type;
     private String name;
     private Integer weight;
@@ -8,6 +9,14 @@ public abstract class Stone {
     private Integer prise;
 
     public Stone() {
+    }
+
+    public Integer getPersonalNumber() {
+        return personalNumber;
+    }
+
+    public void setPersonalNumber(Integer personalNumber) {
+        this.personalNumber = personalNumber;
     }
 
     public String getType() {
@@ -50,13 +59,23 @@ public abstract class Stone {
         this.prise = prise;
     }
 
+    protected Integer calculatePrimaryPrise(){
+        return this.getWeight()*1000 + (int)Math.round(this.getTransparency()*1000);
+    }
+
+    public void calculatePrise(){
+        this.setPrise((int)(this.calculatePrimaryPrise()));
+    }
+
     @Override
     public String toString() {
         return "Stone{" +
-                "name = " + name + '\'' +
-                ", weight =" + weight +
-                ", transparency= " + transparency +
-                ", prise= " + prise +
+                "personalNumber=" + personalNumber +
+                ", type='" + type + '\'' +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", transparency=" + transparency +
+                ", prise=" + prise +
                 '}';
     }
 }

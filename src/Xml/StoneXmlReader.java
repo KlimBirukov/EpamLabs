@@ -36,9 +36,9 @@ public class StoneXmlReader {
                         switch (tagStoneType) {
                             case "type":
                                 type = reader.getAttributeValue(null, "id");
-                                if (type == "GemStone") {
+                                if (type.compareToIgnoreCase("GemStone")==0) {
                                     newStone = new GemStone();
-                                } else if (type == "SemiGemStone") {
+                                } else if (type.compareToIgnoreCase("SemiGemStone")==0) {
                                     newStone = new SemiGemStone();
                                 } else {
                                     newStone = new UnknownStone();
@@ -46,6 +46,9 @@ public class StoneXmlReader {
                                     //then you can do it here.
                                 }
                                 newStone.setType(type);
+                                break;
+                            case "personalNumber":
+                                newStone.setPersonalNumber(Integer.parseInt(reader.getElementText()));
                                 break;
                             case "name":
                                 newStone.setName(reader.getElementText());

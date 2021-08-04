@@ -98,8 +98,62 @@ public class Main {
             jFrame.revalidate();
         });
 
+        saveButton.addActionListener(save -> {
+            List<Shelf> newShelves = new ArrayList<>();
+            List<Stone> newStones = new ArrayList<>();
+
+            for (Shelf s : SelectedShelves) {
+                newShelves.add(s);
+            }
+            for (Shelf s : shelves) {
+                newShelves.add(s);
+            }
+
+            for (Stone s : SelectedStones) {
+                newStones.add(s);
+            }
+            for (Stone s : stones) {
+                newStones.add(s);
+            }
+
+            for (int i = 0; i < newShelves.size() - 1; i++) {
+                for (int j = i + 1; j < newShelves.size(); j++) {
+                    if (newShelves.get(i).getName().compareToIgnoreCase(
+                            newShelves.get(j).getName()) == 0) {
+                        newShelves.remove(j);
+                    }
+                }
+            }
+            SelectedShelves.clear();
+            shelves.clear();
+            for (Shelf s : newShelves) {
+                shelves.add(s);
+            }
+            newShelves.clear();
+
+            for (int i = 0; i < newStones.size() - 1; i++) {
+                for (int j = i + 1; j < newStones.size(); j++) {
+                    if (newStones.get(i).getPersonalNumber() ==
+                            newStones.get(i).getPersonalNumber()) {
+                        newStones.remove(j);
+                    }
+                }
+            }
+            SelectedStones.clear();
+            shelves.clear();
+            for(Stone s: newStones){
+                stones.add(s);
+            }
+            newStones.clear();
+        });
+
         jFrame.setVisible(true);
         jFrame.validate();
+
+        Function.recalculateAllField(shelves, stones);
+
+        ShelfXmlWriter.WriteToFile(FILE_SHELVES_NAME, shelves);
+        StoneXmlWriter.WriteToFile(FILE_STONES_NAME,stones);
 
     }
 }

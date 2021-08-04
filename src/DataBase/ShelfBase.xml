@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <shelves>
-    <name id="GemStone">
-        <totalWeight>2</totalWeight>
-        <amountOfStone>2</amountOfStone>
-        <totalPrise>2</totalPrise>
-    </name>
-    <name id="SemiGemStone">
-        <totalWeight>3</totalWeight>
-        <amountOfStone>4</amountOfStone>
-        <totalPrise>3</totalPrise>
-    </name>
+	<name id="GemStone">
+		<totalWeight>35</totalWeight>
+		<amountOfStone>1</amountOfStone>
+		<totalPrise>47124</totalPrise>
+	</name>
+	<name id="SemiGemStone">
+		<totalWeight>35</totalWeight>
+		<amountOfStone>1</amountOfStone>
+		<totalPrise>36543</totalPrise>
+	</name>
 </shelves>
+

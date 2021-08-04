@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <stones>
-    <type id="GemStone">
-        <name>Diamond</name>
-        <weight>12</weight>
-        <transparency>0.32</transparency>
-        <prise>32000</prise>
-    </type>
-    <type id="SemiGemStone">
-        <name>Opal</name>
-        <weight>35</weight>
-        <transparency>0.88</transparency>
-        <prise>16000</prise>
-    </type>
+	<type id="GemStone">
+		<personalNumber>1400001</personalNumber>
+		<name>Diamond</name>
+		<weight>35</weight>
+		<transparency>0.88</transparency>
+		<prise>47124</prise>
+	</type>
+	<type id="SemiGemStone">
+		<personalNumber>1400002</personalNumber>
+		<name>Opal</name>
+		<weight>35</weight>
+		<transparency>0.88</transparency>
+		<prise>36543</prise>
+	</type>
 </stones>
+
