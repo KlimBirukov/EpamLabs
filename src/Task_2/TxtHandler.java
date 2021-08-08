@@ -29,6 +29,32 @@ public class TxtHandler {
         }
     }
 
+    public static void write(TreeSet<String> dictionary) throws IOException {
+        File file = null;
+        BufferedWriter bw = null;
+        try {
+            file = new File("src/dictionary.txt");
+            bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)));
+            String firstLater = dictionary.first().substring(0, 1);
+
+            for (String s : dictionary) {
+                if (s.substring(0, 1).compareTo(firstLater) != 0) {
+                    bw.newLine();
+                    firstLater = s.substring(0, 1);
+                }
+                bw.write(s);
+                bw.newLine();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (bw != null) {
+                bw.close();
+            }
+        }
+    }
+
     private static TreeSet<String> func(String[] temp) {
         Pattern emailPattern = Pattern.compile("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$");
         Pattern phoneNumberPattern = Pattern.compile("\\+\\d{3}\\(\\d{2}\\)\\d{3}-\\d{2}-\\d{2}");
