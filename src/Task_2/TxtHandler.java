@@ -74,4 +74,19 @@ public class TxtHandler {
         }
         return res;
     }
+
+    public static boolean check(String path) {
+        File file = new File(path);
+        try {
+            if (!file.exists()) {
+                System.out.println("Файл по пути " + file.getCanonicalPath() + " не существует.");
+                return false;
+            } else {
+                return true;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
