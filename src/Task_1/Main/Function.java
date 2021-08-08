@@ -1,7 +1,7 @@
-package Main;
+package Task_1.Main;
 
-import domain.shelf.Shelf;
-import domain.stone.Stone;
+import Task_1.domain.shelf.Shelf;
+import Task_1.domain.stone.Stone;
 
 import java.util.List;
 

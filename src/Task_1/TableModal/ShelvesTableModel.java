@@ -1,6 +1,6 @@
-package TableModal;
+package Task_1.TableModal;
 
-import domain.shelf.Shelf;
+import Task_1.domain.shelf.Shelf;
 
 import javax.swing.event.TableModelListener;
 import javax.swing.table.TableModel;

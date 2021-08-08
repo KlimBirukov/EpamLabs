@@ -1,4 +1,4 @@
-package domain.stone;
+package Task_1.domain.stone;
 
 public abstract class Stone {
     private Integer personalNumber;

@@ -1,9 +1,9 @@
-package Xml;
+package Task_1.Xml;
 
-import domain.stone.GemStone;
-import domain.stone.SemiGemStone;
-import domain.stone.Stone;
-import domain.stone.UnknownStone;
+import Task_1.domain.stone.GemStone;
+import Task_1.domain.stone.SemiGemStone;
+import Task_1.domain.stone.Stone;
+import Task_1.domain.stone.UnknownStone;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;

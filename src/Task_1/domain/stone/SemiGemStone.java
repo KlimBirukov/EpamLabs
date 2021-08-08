@@ -1,4 +1,4 @@
-package domain.stone;
+package Task_1.domain.stone;
 
 public class SemiGemStone extends UnknownStone {
     private static final Double PRISE_PARAMETER = 1.0185;

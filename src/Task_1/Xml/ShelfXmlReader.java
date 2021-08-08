@@ -1,6 +1,6 @@
-package Xml;
+package Task_1.Xml;
 
-import domain.shelf.Shelf;
+import Task_1.domain.shelf.Shelf;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;

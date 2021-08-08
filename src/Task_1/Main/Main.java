@@ -1,14 +1,12 @@
-package Main;
+package Task_1.Main;
 
-import TableModal.ShelvesTableModel;
-import TableModal.StonesTableModel;
-import domain.shelf.Shelf;
-import domain.stone.Stone;
-import Xml.*;
+import Task_1.TableModal.ShelvesTableModel;
+import Task_1.TableModal.StonesTableModel;
+import Task_1.domain.shelf.Shelf;
+import Task_1.domain.stone.Stone;
+import Task_1.Xml.*;
 
 import javax.swing.*;
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +14,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        String FILE_STONES_NAME = "src/DataBase/StoneBase.xml";
-        String FILE_SHELVES_NAME = "src/DataBase/ShelfBase.xml";
+        String FILE_STONES_NAME = "src/Task_1/DataBase/StoneBase.xml";
+        String FILE_SHELVES_NAME = "src/Task_1/DataBase/ShelfBase.xml";
 
         JFrame jFrame = new JFrame("Stones");
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

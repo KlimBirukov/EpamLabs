@@ -1,6 +1,6 @@
-package TableModal;
+package Task_1.TableModal;
 
-import domain.stone.Stone;
+import Task_1.domain.stone.Stone;
 
 import javax.swing.event.TableModelListener;
 import javax.swing.table.TableModel;

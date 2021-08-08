@@ -1,4 +1,4 @@
-package domain.shelf;
+package Task_1.domain.shelf;
 
 public class Shelf {
     private String name;
