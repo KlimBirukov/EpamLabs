@@ -12,7 +12,9 @@ public class Main {
         System.out.println("Введите полный путь к file.txt");
         String fileName = in.next();
 
-        TxtHandler.read(fileName, dictionary);
-        TxtHandler.write(dictionary);
+        if(TxtHandler.check(fileName)) {
+            TxtHandler.read(fileName, dictionary);
+            TxtHandler.write(dictionary);
+        }
     }
 }
