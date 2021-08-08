@@ -13,5 +13,6 @@ public class Main {
         String fileName = in.next();
 
         TxtHandler.read(fileName, dictionary);
+        TxtHandler.write(dictionary);
     }
 }

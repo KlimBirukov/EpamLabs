@@ -17,7 +17,7 @@ public class TxtHandler {
 
             while ((line = br.readLine()) != null) {
                 String[] words = line.split("\s+|[,:;?!}{\\[\\]><\\\\\\/\\|#№$%^&*=_ '\"]");
-                //d.addAll(func(words));
+                d.addAll(func(words));
             }
 
         } catch (Exception e) {
@@ -33,7 +33,7 @@ public class TxtHandler {
         File file = null;
         BufferedWriter bw = null;
         try {
-            file = new File("src/dictionary.txt");
+            file = new File("src/Task_2/dictionary.txt");
             bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)));
             String firstLater = dictionary.first().substring(0, 1);
 
